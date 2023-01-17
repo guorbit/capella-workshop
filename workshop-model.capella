@@ -531,9 +531,6 @@
         <ownedSystemFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
             id="6eef7dbd-3571-4de3-b215-9e2f3cdce081" name="Root System Function">
           <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
-              id="46bc3cc7-ab2d-4a49-949d-442c00cdd09f" targetElement="#3c474964-02b4-40d1-8213-96ca644e6408"
-              sourceElement="#a91e9cc9-d12d-46b7-9160-a223c5d06d19"/>
-          <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
               id="b90c894c-3741-43b7-9d04-5e617b4eb3dd" targetElement="#a1ef624d-09a7-4b27-a1cd-dd0ecb37b84b"
               sourceElement="#82625467-751e-4663-8dd8-9a19f7bdfa5b"/>
           <ownedTraces xsi:type="org.polarsys.capella.core.data.capellacommon:TransfoLink"
@@ -571,9 +568,6 @@
               sourceElement="#32ec9e24-3e15-401d-9d19-8545e3d3fbf5"/>
           <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.fa:FunctionalChain"
               id="7b092ad0-7275-4ba5-a629-77fcf295789e" name="Detect and Arrest Illegal Fishing Vessel">
-            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
-                id="a91e9cc9-d12d-46b7-9160-a223c5d06d19" involved="#72ed883c-7cb2-42ba-b465-da1ede2e966d"
-                source="#ca12f5f1-3728-4720-8e34-e7569bb294c4" target="#82625467-751e-4663-8dd8-9a19f7bdfa5b"/>
             <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
                 id="82625467-751e-4663-8dd8-9a19f7bdfa5b" involved="#6d58e761-7e18-40bb-957e-ed3b525dc7c6"/>
             <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
@@ -765,13 +759,6 @@
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="73deb6cc-63be-417d-b8e4-211203e73c00" targetElement="#f8ef3738-ee7c-4272-af94-081082b7bf65"
               sourceElement="#6eef7dbd-3571-4de3-b215-9e2f3cdce081"/>
-          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="72ed883c-7cb2-42ba-b465-da1ede2e966d" name="SAR Return" target="#861fbd5d-130c-4138-87de-3bb4810dd0df"
-              source="#0ebc7d1e-1b84-4b23-9db8-d4ded4383d5c">
-            <ownedFunctionalExchangeRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchangeRealization"
-                id="b7c1dc8c-a796-48e5-996f-f8cb05389f4c" targetElement="#ea223142-f56f-4156-82df-f910d1b7acc4"
-                sourceElement="#72ed883c-7cb2-42ba-b465-da1ede2e966d"/>
-          </ownedFunctionalExchanges>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="22603026-cd3d-46a8-a1b0-76033a0866ef" name="Arrest Patrol" target="#735d1c09-a406-420d-bb81-ab0e2d572991"
               source="#4737c359-50bb-47d6-aadf-42e0b52fe296">
@@ -980,6 +967,18 @@
             name="Flag State" abstractType="#6c8def31-ad64-408d-8233-9eda9ba5a682"/>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
             id="0b360d30-d0e5-47fe-85e6-d9483e7138c8" name="System">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="02b07255-ffbb-476a-8cf8-7fd02b06cdb7" targetElement="#bed9672b-944b-46f9-b1c3-85fe21330d6a"
+              sourceElement="#0b360d30-d0e5-47fe-85e6-d9483e7138c8"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="c25b91b6-8804-4ca6-ac2f-74ac17d2ed17" targetElement="#8b367d92-88c1-4c98-aa64-028b35d7817d"
+              sourceElement="#0b360d30-d0e5-47fe-85e6-d9483e7138c8"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="41ce639b-43f0-49d6-b085-42a6dcd3f3f4" targetElement="#4dcc6c63-2199-464f-bc1a-fe56e3ffe2fa"
+              sourceElement="#0b360d30-d0e5-47fe-85e6-d9483e7138c8"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="6e7f42f2-2bac-489d-9f2d-553fb2fa80f9" targetElement="#8810466e-b7d9-4557-b61f-31637c06d2d0"
+              sourceElement="#0b360d30-d0e5-47fe-85e6-d9483e7138c8"/>
           <ownedStateMachines xsi:type="org.polarsys.capella.core.data.capellacommon:StateMachine"
               id="e8b3dde1-5087-4f3b-9216-11f821501b62" name="System State Machine">
             <ownedRegions xsi:type="org.polarsys.capella.core.data.capellacommon:Region"
@@ -1023,6 +1022,12 @@
               sourceElement="#1a6de0e4-c709-4d3b-a918-62c9b0a272f3"/>
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="12f0501c-63d8-4648-b816-f6ec1cf4d387" targetElement="#2529e079-e210-4d47-b46b-ee9566513aaa"
+              sourceElement="#1a6de0e4-c709-4d3b-a918-62c9b0a272f3"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="e9580209-2239-4bbd-86e9-ef78da92de52" targetElement="#8597072a-5c0d-4f9a-ad1a-7aea53821352"
+              sourceElement="#1a6de0e4-c709-4d3b-a918-62c9b0a272f3"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="918ce976-7d56-4acb-b893-45e5f7a3f4e8" targetElement="#8ea68f74-f9c0-4418-9e71-0dc9174310e5"
               sourceElement="#1a6de0e4-c709-4d3b-a918-62c9b0a272f3"/>
           <ownedComponentRealizations xsi:type="org.polarsys.capella.core.data.cs:ComponentRealization"
               id="1331b2e4-0f6e-4630-a6db-a29971336d36" targetElement="#153cfc58-0b1a-4894-97d4-f801e89ca3bb"
