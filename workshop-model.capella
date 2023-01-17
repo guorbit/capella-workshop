@@ -601,6 +601,46 @@
                 id="920ce34c-53d9-43ee-b48b-2ab117842d7b" targetElement="#16f6e4c6-0b2b-4581-829b-f8ff0b1b6457"
                 sourceElement="#7b092ad0-7275-4ba5-a629-77fcf295789e"/>
           </ownedFunctionalChains>
+          <ownedFunctionalChains xsi:type="org.polarsys.capella.core.data.fa:FunctionalChain"
+              id="f9e060e2-5bcc-4cdc-a070-76e760392da6" name="Detect Illegal Fishing Vessel">
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="d98485db-1bf3-4510-9c52-c983a3c7e3c5" involved="#bb29513a-f4a7-4bc5-bfdc-e7df9ee5c24a"
+                source="#a72d9c53-a5f0-4413-8985-c018c65048e9" target="#38ece11e-efb1-413b-a3df-8d00b66e4e1b"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="38ece11e-efb1-413b-a3df-8d00b66e4e1b" involved="#bed9672b-944b-46f9-b1c3-85fe21330d6a"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="a72d9c53-a5f0-4413-8985-c018c65048e9" involved="#8597072a-5c0d-4f9a-ad1a-7aea53821352"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="c0bf74d1-6189-4476-bb3a-44541dd1a4d5" involved="#7bfd32b6-7036-47dd-ad39-418832cacbb1"
+                source="#38ece11e-efb1-413b-a3df-8d00b66e4e1b" target="#a16410ed-b925-4477-8970-e86136b55c72"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="a16410ed-b925-4477-8970-e86136b55c72" involved="#4dcc6c63-2199-464f-bc1a-fe56e3ffe2fa"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="b1900446-70b0-442d-991d-02f8c9db0744" involved="#6adfca1f-5e36-4e9e-9bc2-97809b0caa33"
+                source="#a16410ed-b925-4477-8970-e86136b55c72" target="#82c39468-a012-4daf-82e8-b6042f87c519"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="82c39468-a012-4daf-82e8-b6042f87c519" involved="#d94700f4-d7b3-40b0-a482-bb6f5924ea5e"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="daca6e4d-c887-448c-b2f0-c23785f18c3e" involved="#d0717dfe-e08d-4683-95a0-13b86c5a4702"
+                source="#82c39468-a012-4daf-82e8-b6042f87c519" target="#14077d45-2ca4-4916-a817-7f508459ffc2"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="14077d45-2ca4-4916-a817-7f508459ffc2" involved="#8810466e-b7d9-4557-b61f-31637c06d2d0"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="6f0bf520-edd0-43f8-ab5e-de8677ca44df" involved="#c74293bb-7711-4376-b8fd-36d6de46a529"
+                source="#14077d45-2ca4-4916-a817-7f508459ffc2" target="#a536717e-dd9e-4202-9a24-f6ad2784e16d"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="a536717e-dd9e-4202-9a24-f6ad2784e16d" involved="#8b367d92-88c1-4c98-aa64-028b35d7817d"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="60de3782-ffd9-4782-bb11-f2ef96eb38c8" involved="#2fb41665-a2f2-460d-b0a3-48f9829c9aff"
+                source="#a536717e-dd9e-4202-9a24-f6ad2784e16d" target="#25119bdf-36cf-43ff-9622-66ceeae8e461"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="25119bdf-36cf-43ff-9622-66ceeae8e461" involved="#8ea68f74-f9c0-4418-9e71-0dc9174310e5"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementLink"
+                id="4a34fcc8-1f7e-4ed5-8eb9-334ca83efe83" involved="#3c66640c-4dca-4c7a-852e-f1801dfc6fa2"
+                source="#25119bdf-36cf-43ff-9622-66ceeae8e461" target="#2b6320e2-bfa4-47a1-8b6d-c028ee64a230"/>
+            <ownedFunctionalChainInvolvements xsi:type="org.polarsys.capella.core.data.fa:FunctionalChainInvolvementFunction"
+                id="2b6320e2-bfa4-47a1-8b6d-c028ee64a230" involved="#6d58e761-7e18-40bb-957e-ed3b525dc7c6"/>
+          </ownedFunctionalChains>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="553204ab-3b68-412a-b66b-1876ec163e27" name="Process Fisheries Surveillance Data">
             <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
@@ -695,8 +735,6 @@
                   id="c653a562-1d27-4e62-bc11-163a382938d4" name="FIP 1"/>
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="0ebc7d1e-1b84-4b23-9db8-d4ded4383d5c" name="outSAR Return"/>
-              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                  id="d1eab8a7-8273-4ec7-bc24-01d35398f09e" name="FOP 2"/>
               <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
                   id="3cf977ca-e660-490c-806a-ed854f480b4f" targetElement="#fddb7def-f214-4f13-8763-73a3a04ecdbc"
                   sourceElement="#d94700f4-d7b3-40b0-a482-bb6f5924ea5e"/>
@@ -770,6 +808,8 @@
                 id="8ea68f74-f9c0-4418-9e71-0dc9174310e5" name="Receive Ship Coordinates">
               <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                   id="dca5b482-2575-44be-bd24-223dbfd005ac" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="d00d6079-e290-4adc-87cd-0972734b4ef0" name="FOP 1"/>
             </ownedFunctions>
             <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
                 id="2fb41665-a2f2-460d-b0a3-48f9829c9aff" name="Ship Coordinates Transmission"
@@ -824,10 +864,13 @@
               source="#d4787153-bc13-4794-9152-1886bfb2a772"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="d0717dfe-e08d-4683-95a0-13b86c5a4702" name="SAR Return" target="#44f3728c-f6b5-48ff-8496-42f43c56406e"
-              source="#d1eab8a7-8273-4ec7-bc24-01d35398f09e"/>
+              source="#0ebc7d1e-1b84-4b23-9db8-d4ded4383d5c"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="c74293bb-7711-4376-b8fd-36d6de46a529" name="Ship Coordinates" target="#3cb53eb1-bb54-4f5a-b7c5-706460bfbe03"
               source="#8ac552e3-acc1-4643-b707-c9702c0096b2"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="3c66640c-4dca-4c7a-852e-f1801dfc6fa2" name="Ship Coordinates from SAR"
+              target="#861fbd5d-130c-4138-87de-3bb4810dd0df" source="#d00d6079-e290-4adc-87cd-0972734b4ef0"/>
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
