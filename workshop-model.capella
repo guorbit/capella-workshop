@@ -16,7 +16,7 @@
     xmlns:org.polarsys.capella.core.data.la="http://www.polarsys.org/capella/core/la/6.0.0"
     xmlns:org.polarsys.capella.core.data.oa="http://www.polarsys.org/capella/core/oa/6.0.0"
     xmlns:org.polarsys.capella.core.data.pa="http://www.polarsys.org/capella/core/pa/6.0.0"
-    id="f20a20c0-8cd6-4e51-919b-0a548a3051f7"
+    xmlns:re="http://www.polarsys.org/capella/common/re/6.0.0" id="f20a20c0-8cd6-4e51-919b-0a548a3051f7"
     name="workshop-model">
   <ownedExtensions xsi:type="libraries:ModelInformation" id="d8b6f039-ddd4-4f90-8cf4-365772b5e3e8"/>
   <ownedEnumerationPropertyTypes xsi:type="org.polarsys.capella.core.data.capellacore:EnumerationPropertyType"
@@ -38,6 +38,20 @@
       key="projectApproach" value="SingletonComponents"/>
   <ownedModelRoots xsi:type="org.polarsys.capella.core.data.capellamodeller:SystemEngineering"
       id="be7b3041-2bd2-4495-8fdb-5c1d13fcbf48" name="workshop-model">
+    <ownedExtensions xsi:type="re:RecCatalog" id="af9e198c-274d-48c6-b9f5-37413d2bee89"
+        name="REC Catalog">
+      <ownedElements xsi:type="re:CatalogElement" id="5e45af5c-d3e3-4c97-aceb-b3a0f9c8e9bb"
+          name="REC_SAR" defaultReplicaCompliancy="#81ed67d7-cc53-455c-9f53-5f220a199b92"/>
+      <ownedCompliancyDefinitionPkg xsi:type="re:CompliancyDefinitionPkg" id="c1d6618c-327c-4424-93eb-0749b89b3827"
+          name="Compliancy Definitions">
+        <ownedDefinitions xsi:type="re:CompliancyDefinition" id="81ed67d7-cc53-455c-9f53-5f220a199b92"
+            name="BLACK_BOX"/>
+        <ownedDefinitions xsi:type="re:CompliancyDefinition" id="8f131450-6f2a-4b5f-aa25-1f06027a338a"
+            name="CONSTRAINT_REUSE"/>
+        <ownedDefinitions xsi:type="re:CompliancyDefinition" id="8b82a34f-790a-4e02-8381-03364e58673c"
+            name="INHERITANCY_REUSE"/>
+      </ownedCompliancyDefinitionPkg>
+    </ownedExtensions>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.oa:OperationalAnalysis"
         id="0d553cfe-07f0-45b7-9e19-70faf8cd588d" name="Operational Analysis">
       <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
@@ -54,9 +68,26 @@
                 id="f6febff2-40f3-4627-ac13-6e3865c6b31a" name="Process SAR Data"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="048ca4a5-75dc-4782-9d7e-ac6f15bc9e18" name="Broadcast AIS"/>
+              id="048ca4a5-75dc-4782-9d7e-ac6f15bc9e18" name="Broadcast AIS">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="53b0d0fa-0c84-429e-aa33-180e6163e477" name="Broadcast Legal Fishing Vessel AIS"/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="7f90dcb0-c462-4ae7-b995-6d99d916555f" name="Broadcast Non-Fishing Vessel AIS"/>
+          </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="42f79a34-3ede-428b-bb7b-d22e1e9d2848" name="Broadcast VMS"/>
+              id="42f79a34-3ede-428b-bb7b-d22e1e9d2848" name="Broadcast VMS">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="9bedf5ef-83ff-4556-acc8-289888adbb00" name="Broadcast Legal Fishing Vessel VMS"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="b7be2a72-8dd5-493c-aa7e-65d24a435743" name="Give SAR Return">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="12b7202c-d094-45a8-b6fb-73a5868a34d3" name="Give Legal Fishing Vessel SAR Return"/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="fddb7def-f214-4f13-8763-73a3a04ecdbc" name="Give Illegal Fishing Vessel SAR Return"/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="bbc6109a-5e62-449e-8244-b0c4e5183cfe" name="Give Non-Fishing Vessel SAR Return"/>
+          </ownedFunctions>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
@@ -118,16 +149,47 @@
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="40e97768-4269-41d7-bb67-0147dccb5e8d"
               name="Law Enforcement"/>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="153cfc58-0b1a-4894-97d4-f801e89ca3bb"
-              name="Fisheries Control"/>
+              name="Fisheries Control">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="507eec19-e122-4a53-b459-33c5800fea22" targetElement="#ce544256-d383-44e6-81ea-95c44ecd4cbd"
+                sourceElement="#153cfc58-0b1a-4894-97d4-f801e89ca3bb"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="bbce8516-1df3-4b2a-8f59-4bcdb200f3e8" targetElement="#c8ee1b99-cd42-4e64-9800-8a1d2e17d731"
+                sourceElement="#153cfc58-0b1a-4894-97d4-f801e89ca3bb"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="6d06c9db-44f0-44c6-941e-275b998ec123" targetElement="#f6febff2-40f3-4627-ac13-6e3865c6b31a"
+                sourceElement="#153cfc58-0b1a-4894-97d4-f801e89ca3bb"/>
+          </ownedEntities>
         </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="0713f3e9-7771-4001-bd8c-b597310cb2a3"
-            name="Illegal Fisherman" actor="true" human="true"/>
+            name="Illegal Fisherman" actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="40655df6-42fb-4f8d-b6cc-7a9389043d15" targetElement="#fddb7def-f214-4f13-8763-73a3a04ecdbc"
+              sourceElement="#0713f3e9-7771-4001-bd8c-b597310cb2a3"/>
+        </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="73340c8d-396c-41c6-98e8-8531a04619c9"
             name="Sea Shepherd Global"/>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="79b13adf-5958-43a4-94fd-f4e6eb81012c"
-            name="Legal Fisherman" actor="true" human="true"/>
+            name="Legal Fisherman" actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="c961a40f-719c-46c7-8fb1-351b267e8758" targetElement="#53b0d0fa-0c84-429e-aa33-180e6163e477"
+              sourceElement="#79b13adf-5958-43a4-94fd-f4e6eb81012c"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="5c5e1c4b-ad91-4489-85f1-be4114841531" targetElement="#9bedf5ef-83ff-4556-acc8-289888adbb00"
+              sourceElement="#79b13adf-5958-43a4-94fd-f4e6eb81012c"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="8c9e16c7-2a0b-454c-8ada-c42f7d6b8df1" targetElement="#12b7202c-d094-45a8-b6fb-73a5868a34d3"
+              sourceElement="#79b13adf-5958-43a4-94fd-f4e6eb81012c"/>
+        </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="2a8f4e8d-2053-4391-9205-fb4b893b9285"
-            name="Yacht Captain" actor="true" human="true"/>
+            name="Yacht Captain" actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="023506bc-4716-4150-ad2d-0e19c5a370c8" targetElement="#7f90dcb0-c462-4ae7-b995-6d99d916555f"
+              sourceElement="#2a8f4e8d-2053-4391-9205-fb4b893b9285"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="f2a9c98a-ac15-424e-8e3a-a4d104868cad" targetElement="#bbc6109a-5e62-449e-8244-b0c4e5183cfe"
+              sourceElement="#2a8f4e8d-2053-4391-9205-fb4b893b9285"/>
+        </ownedEntities>
       </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
