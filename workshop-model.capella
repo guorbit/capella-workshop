@@ -810,6 +810,16 @@
               id="90fde569-1aec-46e3-b155-411cb8b51dea" targetElement="#cdf7b4cb-f838-4d6f-98c2-d06a431417fd"
               sourceElement="#97a658e4-32d4-42d8-b315-7873a40b67be"/>
         </ownedCapabilities>
+        <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
+            id="ee8a9384-3620-4f7a-9dba-593cbf670615" name="Capture SAR Image">
+          <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
+              id="61206fb1-bde2-422c-8ac5-2d6061c70bc4" involved="#0b360d30-d0e5-47fe-85e6-d9483e7138c8"/>
+        </ownedCapabilities>
+        <ownedCapabilities xsi:type="org.polarsys.capella.core.data.ctx:Capability"
+            id="33d82b80-369a-4438-a2d3-610bb89ac3ee" name="Process SAR Image">
+          <ownedCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.ctx:CapabilityInvolvement"
+              id="33d6349d-8305-4f88-8006-a78d7fcb777e" involved="#0b360d30-d0e5-47fe-85e6-d9483e7138c8"/>
+        </ownedCapabilities>
       </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
           id="6afd62a9-5163-4976-a382-32021d065910" name="Interfaces"/>
@@ -1076,7 +1086,12 @@
             id="99141b6a-6d42-4c7e-92c6-2906dddbcc09" targetElement="#e6a17af6-7481-46ff-a969-987d5520aecc"
             sourceElement="#1ae56ee4-6f29-453d-a2af-a4ff6718cabc"/>
         <ownedMissions xsi:type="org.polarsys.capella.core.data.ctx:Mission" id="1ae56ee4-6f29-453d-a2af-a4ff6718cabc"
-            name="Detect Illegal Fishing"/>
+            name="Detect Illegal Fishing">
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="86e3d20c-1f5b-4c93-9513-95f1af5b2e7f" capability="#ee8a9384-3620-4f7a-9dba-593cbf670615"/>
+          <ownedCapabilityExploitations xsi:type="org.polarsys.capella.core.data.ctx:CapabilityExploitation"
+              id="7f8e7ee6-f477-4514-9d10-7f9b2fa9f7f9" capability="#33d82b80-369a-4438-a2d3-610bb89ac3ee"/>
+        </ownedMissions>
       </ownedMissionPkg>
       <ownedOperationalAnalysisRealizations xsi:type="org.polarsys.capella.core.data.ctx:OperationalAnalysisRealization"
           id="23fce634-30d8-42fb-8e8b-ed513a7550aa" targetElement="#0d553cfe-07f0-45b7-9e19-70faf8cd588d"
