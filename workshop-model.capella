@@ -50,16 +50,31 @@
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="fcb81bbf-b956-4e01-8bf4-7b2a55dd6e5b" name="Prevent Illegal Fishing"/>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
-            id="517b3310-0e5b-4173-ab96-1afb5a5ea78a" name="Ignore Lawful Activities"/>
+            id="517b3310-0e5b-4173-ab96-1afb5a5ea78a" name="Ignore Lawful Activities">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="4dfd12c7-b9e7-4e19-8984-57a39eb1da7f" involved="#79b13adf-5958-43a4-94fd-f4e6eb81012c"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="47e56a2a-940f-4d48-bddf-06f8b2453246" involved="#2a8f4e8d-2053-4391-9205-fb4b893b9285"/>
+        </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="e6a17af6-7481-46ff-a969-987d5520aecc" name="Detect Illegal Fishing">
           <superGeneralizations xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityGeneralization"
               id="98ac1752-36fd-49ad-82f2-8fe5b6561ecc" super="#fcb81bbf-b956-4e01-8bf4-7b2a55dd6e5b"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="5743c9ce-1ecf-4792-95d5-b856a3c5f804" involved="#0713f3e9-7771-4001-bd8c-b597310cb2a3"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="e7f4ca9a-903c-4a60-99eb-08ae883b59e3" involved="#153cfc58-0b1a-4894-97d4-f801e89ca3bb"/>
         </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="cdf7b4cb-f838-4d6f-98c2-d06a431417fd" name="Stop Illegal Fishing">
           <superGeneralizations xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityGeneralization"
               id="21e0da88-b00e-455b-97b1-260e10a7c620" super="#fcb81bbf-b956-4e01-8bf4-7b2a55dd6e5b"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="89def320-86d9-4698-9475-c1cd0fc28551" involved="#40e97768-4269-41d7-bb67-0147dccb5e8d"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="0876071b-36e6-4fd7-bedb-17f096466583" involved="#0713f3e9-7771-4001-bd8c-b597310cb2a3"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="e75d8833-fa40-4f49-bc70-045eabe2d35c" involved="#73340c8d-396c-41c6-98e8-8531a04619c9"/>
         </ownedOperationalCapabilities>
       </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
