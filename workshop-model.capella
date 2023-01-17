@@ -101,6 +101,9 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="ea223142-f56f-4156-82df-f910d1b7acc4" name="SAR Return" target="#f6febff2-40f3-4627-ac13-6e3865c6b31a"
               source="#fddb7def-f214-4f13-8763-73a3a04ecdbc"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="b4a8c4e6-bf62-40ca-a925-fa13a0b573a4" name="Arrest Patrol" target="#58dc9ee8-d77f-483a-a6a9-f23090581fd5"
+              source="#3769bb01-bbc8-4c1f-88b1-08762386c8b1"/>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
@@ -236,6 +239,54 @@
         </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="cdf7b4cb-f838-4d6f-98c2-d06a431417fd" name="Stop Illegal Fishing">
+          <ownedScenarios xsi:type="org.polarsys.capella.core.data.interaction:Scenario"
+              id="c9586b42-8007-44e3-9cbe-34e99ca89134" name="[OES] Stop Illegal Fishing Scenario"
+              kind="INTERACTION">
+            <ownedInstanceRoles xsi:type="org.polarsys.capella.core.data.interaction:InstanceRole"
+                id="3d969879-6192-44f6-930e-e78da009a0d3" name="Sea Shepherd Global"
+                representedInstance="#94ff2e4c-10c5-40eb-877a-db3e6012d780"/>
+            <ownedInstanceRoles xsi:type="org.polarsys.capella.core.data.interaction:InstanceRole"
+                id="9178479b-21c7-402e-b8f0-a797241a9b97" name="Law Enforcement" representedInstance="#90feb0a4-09ea-423c-94ff-eac7fcd6e833"/>
+            <ownedMessages xsi:type="org.polarsys.capella.core.data.interaction:SequenceMessage"
+                id="10661c44-c467-4b07-88ee-c4e112af8a4d" name="Arrest Patrol" kind="ASYNCHRONOUS_CALL"
+                sendingEnd="#3d8e4b3a-dd4f-4748-8591-34723ae0dc20" receivingEnd="#b0ad54a7-88a8-4939-9ddf-504fcf2e7505"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
+                id="47fff961-ea5f-4ace-a13d-4e889ee71cc1" name="Patrol National Waters"
+                coveredInstanceRoles="#3d969879-6192-44f6-930e-e78da009a0d3" relatedAbstractFunction="#3769bb01-bbc8-4c1f-88b1-08762386c8b1"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
+                id="7ce03398-3927-449a-a1c8-fea4d21722f7" name="Patrol National Waters"
+                coveredInstanceRoles="#3d969879-6192-44f6-930e-e78da009a0d3" relatedAbstractFunction="#3769bb01-bbc8-4c1f-88b1-08762386c8b1"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd"
+                id="3d8e4b3a-dd4f-4748-8591-34723ae0dc20" name="Send Call Message Call"
+                coveredInstanceRoles="#3d969879-6192-44f6-930e-e78da009a0d3" event="#5d7dafe4-b5c5-4148-a685-15100b6f079f"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:MessageEnd"
+                id="b0ad54a7-88a8-4939-9ddf-504fcf2e7505" name="Receive Call Message Call"
+                coveredInstanceRoles="#9178479b-21c7-402e-b8f0-a797241a9b97" event="#b38aa6c6-560d-4226-a585-6d37b9ebb11f"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
+                id="28d6edcf-ee0c-4b62-bdac-b48e0eea80c8" name="Issue Arrest Warrant"
+                coveredInstanceRoles="#9178479b-21c7-402e-b8f0-a797241a9b97" relatedAbstractFunction="#58dc9ee8-d77f-483a-a6a9-f23090581fd5"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:InteractionState"
+                id="a9fb632c-52a0-4f9e-b9b5-e2c07bbadc50" name="Issue Arrest Warrant"
+                coveredInstanceRoles="#9178479b-21c7-402e-b8f0-a797241a9b97" relatedAbstractFunction="#58dc9ee8-d77f-483a-a6a9-f23090581fd5"/>
+            <ownedInteractionFragments xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEnd"
+                id="023d99f0-59d4-4e65-bf4b-6456f2ffcb0b" name="endExec" coveredInstanceRoles="#9178479b-21c7-402e-b8f0-a797241a9b97"
+                event="#af457611-dbdb-453c-a5c7-8dd8602d606e"/>
+            <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment"
+                id="e1d391be-bbd2-47a6-8aeb-5911904e6ccd" start="#47fff961-ea5f-4ace-a13d-4e889ee71cc1"
+                finish="#7ce03398-3927-449a-a1c8-fea4d21722f7" relatedAbstractFunction="#3769bb01-bbc8-4c1f-88b1-08762386c8b1"/>
+            <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:StateFragment"
+                id="06ea3f23-898c-43c1-aab1-4d772c8c7bb0" start="#28d6edcf-ee0c-4b62-bdac-b48e0eea80c8"
+                finish="#a9fb632c-52a0-4f9e-b9b5-e2c07bbadc50" relatedAbstractFunction="#58dc9ee8-d77f-483a-a6a9-f23090581fd5"/>
+            <ownedTimeLapses xsi:type="org.polarsys.capella.core.data.interaction:Execution"
+                id="8f6b87f4-6236-49cd-bbd5-b84b403a4f61" start="#b0ad54a7-88a8-4939-9ddf-504fcf2e7505"
+                finish="#023d99f0-59d4-4e65-bf4b-6456f2ffcb0b"/>
+            <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventSentOperation"
+                id="5d7dafe4-b5c5-4148-a685-15100b6f079f" operation="#b4a8c4e6-bf62-40ca-a925-fa13a0b573a4"/>
+            <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:EventReceiptOperation"
+                id="b38aa6c6-560d-4226-a585-6d37b9ebb11f" operation="#b4a8c4e6-bf62-40ca-a925-fa13a0b573a4"/>
+            <ownedEvents xsi:type="org.polarsys.capella.core.data.interaction:ExecutionEvent"
+                id="af457611-dbdb-453c-a5c7-8dd8602d606e"/>
+          </ownedScenarios>
           <superGeneralizations xsi:type="org.polarsys.capella.core.data.interaction:AbstractCapabilityGeneralization"
               id="21e0da88-b00e-455b-97b1-260e10a7c620" super="#fcb81bbf-b956-4e01-8bf4-7b2a55dd6e5b"/>
           <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
