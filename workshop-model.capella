@@ -53,7 +53,37 @@
       <ownedRolePkg xsi:type="org.polarsys.capella.core.data.oa:RolePkg" id="e7aea501-f9ba-4c18-aa1f-877bdb257eca"
           name="Roles"/>
       <ownedEntityPkg xsi:type="org.polarsys.capella.core.data.oa:EntityPkg" id="1d33df5e-7d67-41d4-99a7-27c51f4089f7"
-          name="Operational Entities"/>
+          name="Operational Entities">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="6ddb1501-6108-4b5b-b63b-a5a7064e9c19"
+            name="Flag State" abstractType="#84573e55-7d5b-4f66-bda4-1028f1b1146b"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="6aeb8953-7f26-4621-9fc1-ef737be6a68b"
+            name="Illegal Fisherman" abstractType="#0713f3e9-7771-4001-bd8c-b597310cb2a3"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="94ff2e4c-10c5-40eb-877a-db3e6012d780"
+            name="Sea Shepherd Global" abstractType="#73340c8d-396c-41c6-98e8-8531a04619c9"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="79a555d4-57bb-432f-b038-6a227c1d3f8a"
+            name="Legal Fisherman" abstractType="#79b13adf-5958-43a4-94fd-f4e6eb81012c"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="71d06900-7246-447c-aac6-2d2b9fb1c356"
+            name="Yacht Captain" abstractType="#2a8f4e8d-2053-4391-9205-fb4b893b9285"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="84573e55-7d5b-4f66-bda4-1028f1b1146b"
+            name="Flag State">
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="90feb0a4-09ea-423c-94ff-eac7fcd6e833"
+              name="Law Enforcement" abstractType="#40e97768-4269-41d7-bb67-0147dccb5e8d"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="386981bb-4b66-4b92-98c9-ba266dd6f2a3"
+              name="Fisheries Control" abstractType="#153cfc58-0b1a-4894-97d4-f801e89ca3bb"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="40e97768-4269-41d7-bb67-0147dccb5e8d"
+              name="Law Enforcement"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="153cfc58-0b1a-4894-97d4-f801e89ca3bb"
+              name="Fisheries Control"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="0713f3e9-7771-4001-bd8c-b597310cb2a3"
+            name="Illegal Fisherman" actor="true" human="true"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="73340c8d-396c-41c6-98e8-8531a04619c9"
+            name="Sea Shepherd Global"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="79b13adf-5958-43a4-94fd-f4e6eb81012c"
+            name="Legal Fisherman" actor="true" human="true"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="2a8f4e8d-2053-4391-9205-fb4b893b9285"
+            name="Yacht Captain" actor="true" human="true"/>
+      </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
         id="ee2755f8-6bd3-4d04-b082-b496b71844a3" name="System Analysis">
