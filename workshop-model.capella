@@ -43,7 +43,21 @@
       <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
           id="62b5f086-a9d1-4057-8561-9fc98a499c8f" name="Operational Activities">
         <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-            id="f8ef3738-ee7c-4272-af94-081082b7bf65" name="Root Operational Activity"/>
+            id="f8ef3738-ee7c-4272-af94-081082b7bf65" name="Root Operational Activity">
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="0ac5a651-c6f1-4278-885d-0ce1ab584095" name="Process Fisheries Surveillance Data">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="ce544256-d383-44e6-81ea-95c44ecd4cbd" name="Process VMS Data"/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="c8ee1b99-cd42-4e64-9800-8a1d2e17d731" name="Process AIS Data"/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+                id="f6febff2-40f3-4627-ac13-6e3865c6b31a" name="Process SAR Data"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="048ca4a5-75dc-4782-9d7e-ac6f15bc9e18" name="Broadcast AIS"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="42f79a34-3ede-428b-bb7b-d22e1e9d2848" name="Broadcast VMS"/>
+        </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
           id="c2af1d32-81c7-4982-b3be-1020fbc00d83" name="Operational Capabilities">
