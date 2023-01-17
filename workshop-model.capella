@@ -741,6 +741,27 @@
                 id="4a044d01-ea51-44c1-abca-bd33ad546d39" targetElement="#237b74a2-e9bc-4073-a0e4-a72847ffb5cd"
                 sourceElement="#2529e079-e210-4d47-b46b-ee9566513aaa"/>
           </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="1a74f728-ac93-4a63-a10b-75c03fc55f96" name="Uplink Area of Interest Configuration">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="8597072a-5c0d-4f9a-ad1a-7aea53821352" name="Send Area of Interest Configuration"/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="bed9672b-944b-46f9-b1c3-85fe21330d6a" name="Receive Area of Interest Configuration"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="7da7b748-5a8a-45ad-8a9a-59475a7457d6" name="Downlink Ship Coordinates">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="8b367d92-88c1-4c98-aa64-028b35d7817d" name="Send Ship Coordinates"/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="8ea68f74-f9c0-4418-9e71-0dc9174310e5" name="Receive Ship Coordinates"/>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="ec66f603-382e-4148-9109-fc78fffa31e6" name="Produce SAR Data">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="4dcc6c63-2199-464f-bc1a-fe56e3ffe2fa" name="Trigger SAR Capture over Area of Interest"/>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="8810466e-b7d9-4557-b61f-31637c06d2d0" name="Extract Ship Coordinates"/>
+          </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="73deb6cc-63be-417d-b8e4-211203e73c00" targetElement="#f8ef3738-ee7c-4272-af94-081082b7bf65"
               sourceElement="#6eef7dbd-3571-4de3-b215-9e2f3cdce081"/>
